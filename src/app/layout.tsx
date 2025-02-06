@@ -6,6 +6,9 @@ import { Afacad_Flux } from "next/font/google";
 export const metadata: Metadata = {
   title: "Ahmad Bin Shafiq",
   description: "Python Engineer & AI Specialist",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 const afacad_flux = Afacad_Flux({

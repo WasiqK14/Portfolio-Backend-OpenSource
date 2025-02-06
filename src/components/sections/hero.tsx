@@ -7,11 +7,11 @@ export function HeroSection() {
   
 
   return (
-    <section
+    <WavyBackground
       id="home"
       className="min-h-screen z-10 flex lg:flex-row md:flex-col sm:flex-col items-center justify-center"
-      // blur={100}
-      // colors={["#7c3aed"]}
+      blur={0}
+      colors={["#7c3aed"]}
     >
       <div className="text-center container pb-72 ">
         <motion.h1
@@ -36,6 +36,6 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
         ></motion.div>
       </div>
-    </section>
+    </WavyBackground>
   );
 }
