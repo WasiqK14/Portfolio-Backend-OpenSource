@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, BookOpenIcon } from "lucide-react";
+import { Button } from "../ui/button";
 
 const articles = [
   {
@@ -57,7 +58,7 @@ const itemVariants = {
 export function ArticlesSection() {
   return (
     <section id="articles">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-20">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +78,9 @@ export function ArticlesSection() {
             <motion.div key={index} variants={itemVariants}>
               <Card className="h-full transition-all duration-300 hover:shadow-lg ">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary ">{article.title}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-primary ">
+                    {article.title}
+                  </CardTitle>
                   <CardDescription className="flex items-center  ">
                     <BookOpenIcon className="w-4 h-4 mr-2" />
                     {article.publication}
@@ -94,16 +97,13 @@ export function ArticlesSection() {
                       </Badge>
                     ))}
                   </div>
-                  <motion.a
-                    href={article.link}
-                    target="_blank"
+                  <Button
+                    onClick={() => window.open(article.link, "_blank")}
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-primary text-foreground"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center px-4 py-2 bg-primary"
                   >
                     Read Article
-                  </motion.a>
+                  </Button>
                 </CardContent>
               </Card>
             </motion.div>

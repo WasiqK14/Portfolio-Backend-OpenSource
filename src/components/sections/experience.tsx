@@ -7,8 +7,8 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="container mx-auto py-20 rounded-md flex flex-col antialiased  items-center justify-center relative"
-    >
+      className="container mx-auto py-20 rounded-md flex flex-col antialiased  items-center justify-center relative overflow-clip"
+    > 
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
